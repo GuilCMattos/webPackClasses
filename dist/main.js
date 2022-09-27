@@ -71,6 +71,28 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/modules/moduloA.js":
+/*!********************************!*\
+  !*** ./src/modules/moduloA.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const moduloB = __webpack_require__(/*! ./moduloB */ \"./src/modules/moduloB.js\")\nconsole.log(moduloB.saudacao())\n\n//# sourceURL=webpack:///./src/modules/moduloA.js?");
+
+/***/ }),
+
+/***/ "./src/modules/moduloB.js":
+/*!********************************!*\
+  !*** ./src/modules/moduloB.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = { \n    saudacao() {return 'Olá eu sou módulo B!!!'}\n}\n\n//# sourceURL=webpack:///./src/modules/moduloB.js?");
+
+/***/ }),
+
 /***/ "./src/pessoa.js":
 /*!***********************!*\
   !*** ./src/pessoa.js ***!
@@ -91,7 +113,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pessoa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pessoa */ \"./src/pessoa.js\");\n\n\nconst atendente = new _pessoa__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\nconsole.log(atendente.cumprimentar())\n\n//# sourceURL=webpack:///./src/principal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pessoa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pessoa */ \"./src/pessoa.js\");\n\n__webpack_require__(/*! ./modules/moduloA */ \"./src/modules/moduloA.js\")\n\nconst atendente = new _pessoa__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\nconsole.log(atendente.cumprimentar())\n\n//# sourceURL=webpack:///./src/principal.js?");
 
 /***/ })
 
